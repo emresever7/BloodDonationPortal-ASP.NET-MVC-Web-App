@@ -209,16 +209,8 @@
     <Content Include="Assets\images\whoweare.jpg" />
     <Content Include="Assets\images\whygive-banner.jpg" />
     <Content Include="Assets\images\wp.png" />
-    <Content Include="Content\essentials.css" />
-    <Content Include="Content\layout-shop.css" />
-    <Content Include="Content\layout-studio.css" />
-    <Content Include="Content\layout.css" />
     <Content Include="Content\leaflet-search.css" />
-    <Content Include="Content\nav.css" />
-    <Content Include="Content\simplePagination.css" />
     <Content Include="Content\style.css" />
-    <Content Include="Content\style1.css" />
-    <Content Include="Content\thematics-education.css" />
     <Content Include="Content\whereto.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
