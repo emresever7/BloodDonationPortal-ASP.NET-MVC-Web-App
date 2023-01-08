@@ -1,0 +1,76 @@
+﻿@model IEnumerable<IKU_BloodBank.Models.BloodTeam>
+
+@{
+    ViewBag.Title = "WhereToDonate";
+}
+
+
+
+<div class="whereto-banner">
+    <h1 class="banner-h">Where to Donate</h1>
+</div>
+
+<main class="container">
+    <div class="head">
+        <h1 class="general-h">Find a Donor Centre Near You</h1>
+    </div>
+    <div class="search-box">
+        <h2 class="general-h2">Our Donor Centres and Local Venues</h2>
+        <input type="search" name="search" class="search" id="search" onkeyup="myFunction()" placeholder="City, Town, Postcode..." autocomplete="off">
+    </div>
+
+    <div id="map"></div>
+
+    <div class="middle">
+        <div class="col">
+            <ul id="map-list">
+                <li class="lihead"><span class="name"><b>Donor Centre Name</b></span><span class="city"><b>Location</b></span><span class="number"><b>Donation Type</b></span></li>
+                @foreach (var item in Model)
+                {
+                    <div class="accordion">
+                        <table class="li">
+                            <tr class="list-item">
+                                <td class="teamName"><i class="fa-solid fa-building"></i> @item.TeamName   </td>
+                                <td class="city"><i class="fa-solid fa-location-dot"></i> @item.Town</td>
+
+                                @if (item.Platelets == true)
+                                {
+                                    <td class="number">
+                                        <i class="fa-solid fa-droplet"></i> Blood and Plateles
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td class="number">
+                                        <i class="fa-solid fa-droplet"></i> Blood only
+                                    </td>
+                                }
+
+
+                                <td><i class="fa-solid fa-chevron-down"></i></td>
+                            </tr>
+                        </table>
+                        <div class="panel">
+                            <table>
+                                <tr>
+                                    <th>Address: </th>
+                                    <td>@item.Address </td>
+                                </tr>
+                                <tr>
+                                    <th>Phone Number: </th>
+                                    <td class="phone-number">@item.PhoneNumber </td>
+                                </tr>
+                                <tr>
+                                    <th>Open Hours:</th>
+                                    <td>11:00 - 19:00</td>
+                                </tr>
+                            </table>
+                            <a href="~/Account/Login" class="appointment">Book an Appointment</a>
+                        </div>
+                    </div>
+                }
+            </ul>
+        </div>
+    </div>
+
+</main>

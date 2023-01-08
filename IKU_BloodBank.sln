@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKU_BloodBank", "IKU_BloodBank\IKU_BloodBank.csproj", "{2D1B74ED-7593-4BF8-AC49-CC6B531DCDEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D1B74ED-7593-4BF8-AC49-CC6B531DCDEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1B74ED-7593-4BF8-AC49-CC6B531DCDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1B74ED-7593-4BF8-AC49-CC6B531DCDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1B74ED-7593-4BF8-AC49-CC6B531DCDEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E6D3CB9-2F36-4B60-9178-1C5FE5F25BFD}
+	EndGlobalSection
+EndGlobal

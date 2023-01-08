@@ -1,0 +1,268 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<!--<section class="section-xs">
+    <div class="container" align="center">
+        <h3 style="margin-bottom: 4px;"> CONTACT US </h3>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">-->
+                <!--  alt başlık-->
+                <!--<div id="panel-ui-tan-l4" class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="elipsis">
+                            <h3 style="color:#c10100; margin-bottom: 4px;">Contact Us</h3>
+                        </span>
+                    </div>
+                </div>
+                <hr />
+                <p>
+                    <span class="block">
+                        <strong>Address:</strong> Ataköy 7-8-9-10, E5 Karayolu Üzeri Ataköy Yerleşkesi, 34158 Bakırköy
+                    </span>
+                    <span class="block">
+                        <strong> Phone:</strong>
+                        <a href="tel:+90 212 498 41 41">+90 212 498 41 41</a>
+                    </span>
+                    <span class="block">
+                        <strong> Fax:</strong> +90 212 498 41 41
+                    </span>
+                </p>
+                <hr />
+                <p>
+                    <span class="block">You can send us a message by clicking on the Twitter (İKÜDestek) and Whatsapp application icons below.</span>
+                </p>
+                <div class="row">
+                    <div class="col-md-4 col-sm-5 col-xs-5">
+                        <a class="twitter-dm-button" data-screen-="" href="https://twitter.com/ikuedu" name="İKÜDestek" target="_blank">
+                            <img alt="Twitterdan Mesaj Gönder" class="img-responsive" src="../Assets/images/twitter.png" />
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-5 col-xs-5">
+                        <a href="https://api.whatsapp.com/send?phone=905309184141" target="_blank">
+                            <img alt="Whatsappdan Mesaj Gönder" class="img-responsive" src="../Assets/images/wp.png" />
+                        </a>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+                <hr />
+            </div>
+            <div class="col-md-8 col-sm-8 pt-30 pb-20 alternate">
+                <h4 style="color: #c10100">
+                    IKU Blood Donation Contact Form <br>
+                </h4>
+                <div class="alert alert-danger margin-bottom-30">-->
+                    <!-- DANGER --> <!--It is important that you add your phone number and e-mail address to the contact form so that we can give you the most accurate information. <b> &quot;*&quot; Marked fields are mandatory! </b>
+                </div>
+                <form action="/Iletisim/Send" method="post" id="frmIletisim" class="dropzone" enctype="multipart/form-data">
+                    <fieldset>
+                        <input type="hidden" name="action" value="contact_send">
+                        <input id="AcildigiYer" name="AcildigiYer" type="hidden" value="www.iku.edu.tr/" />
+                        <div class="row">
+                            <div class="col-md-4" id="basvuruNoktasi">
+                                <label for="YurtDisi">Location *</label>
+                                <select class="form-control" id="YurtDisi" name="YurtDisi" tabindex="5">
+                                    <option value="1">In T&#252;rkiye</option>
+                                    <option selected="selected" value="2">International</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="TCKimlikNo">
+                                    T&#252;rkiye ID Number <span> *</span>
+                                </label>
+                                <input class="form-control" id="TCKimlikNo" name="TCKimlikNo" required="required" tabindex="8" type="tel" value="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="Ad">Name *</label>
+                                <input class="form-control" data-val="true" data-val-required="Bu alanın doldurulması zorunludur." id="Ad" name="Ad" required="required" tabindex="10" type="text" value="" />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Soyad">Surname *</label>
+                                <input class="form-control" data-val="true" data-val-required="Bu alanın doldurulması zorunludur." id="Soyad" name="Soyad" required="required" tabindex="20" type="text" value="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="DogumTarihi">
+                                    Birth Date <span> *</span>
+                                </label>
+                                <input type="text" id="DogumTarihi" name="DogumTarihi" class="form-control datepicker required" data-format="dd/mm/yyyy" data-from=1872-11-11 data-to="2022-11-11" data-lang="en" data-rtl="false" tabindex="30" autocomplete="off" placeholder="dd/MM/yyyy">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Cinsiyet">Gender</label>
+                                <select class="form-control pointer" id="Cinsiyet" name="Cinsiyet" tabindex="35">
+                                    <option selected="selected" value="0">Select</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                </select>
+                                <span class="field-validation-valid" data-valmsg-for="Cinsiyet" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="Email">Your e-mail address *</label>
+                                <input class="form-control" data-val="true" data-val-email="Lütfen geçerli bir E-Posta adresi girin" data-val-required="Bu alanın doldurulması zorunludur." id="Email" name="Email" required="required" tabindex="40" type="text" value="" />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="TelefonCep">Mobile Phone *</label>
+                                <input class="form-control" id="TelefonCep" name="TelefonCep" required="required" tabindex="50" type="text" value="" />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="TelefonEv">Home Phone</label>
+                                <input class="form-control" id="TelefonEv" name="TelefonEv" tabindex="60" type="text" value="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="IlId">
+                                    Your province (In T&#252;rkiye) <span class="spYurtIciZorunlu"> *</span>
+                                </label>
+                                <select class="form-control pointer" id="IlId" name="IlId" tabindex="70">
+                                    <option selected="selected" value="">Select</option>
+                                    <option value="1">Adana</option>
+                                    <option value="2">Adıyaman</option>
+                                    <option value="3">Afyon</option>
+                                    <option value="4">Agri</option>
+                                    <option value="68">Aksaray</option>
+                                    <option value="5">Amasya</option>
+                                    <option value="6">Ankara</option>
+                                    <option value="7">Antalya</option>
+                                    <option value="75">Ardahan</option>
+                                    <option value="8">Artvin</option>
+                                    <option value="9">Aydın</option>
+                                    <option value="10">Balıkesir</option>
+                                    <option value="74">Bartın</option>
+                                    <option value="72">Batman</option>
+                                    <option value="69">Bayburt</option>
+                                    <option value="11">Bilecik</option>
+                                    <option value="12">Bing&#246;l</option>
+                                    <option value="13">Bitlis</option>
+                                    <option value="14">Bolu</option>
+                                    <option value="15">Burdur</option>
+                                    <option value="16">Bursa</option>
+                                    <option value="17">&#199;anakkale</option>
+                                    <option value="18">&#199;ankırı</option>
+                                    <option value="19">&#199;orum</option>
+                                    <option value="20">Denizli</option>
+                                    <option value="21">Diyarbakır</option>
+                                    <option value="81">D&#252;zce</option>
+                                    <option value="22">Edirne</option>
+                                    <option value="23">Elazığ</option>
+                                    <option value="24">Erzincan</option>
+                                    <option value="25">Erzurum</option>
+                                    <option value="26">Eskişehir</option>
+                                    <option value="27">Gaziantep</option>
+                                    <option value="28">Giresun</option>
+                                    <option value="29">G&#252;m&#252;şhane</option>
+                                    <option value="30">Hakkari</option>
+                                    <option value="31">Hatay</option>
+                                    <option value="76">Iğdır</option>
+                                    <option value="32">Isparta</option>
+                                    <option value="34">İstanbul</option>
+                                    <option value="35">İzmir</option>
+                                    <option value="46">Kahramanmaraş</option>
+                                    <option value="78">Karab&#252;k</option>
+                                    <option value="70">Karaman</option>
+                                    <option value="36">Kars</option>
+                                    <option value="37">Kastamonu</option>
+                                    <option value="38">Kayseri</option>
+                                    <option value="71">Kırıkkale</option>
+                                    <option value="39">Kırklareli</option>
+                                    <option value="40">Kırşehir</option>
+                                    <option value="79">Kilis</option>
+                                    <option value="41">Kocaeli</option>
+                                    <option value="42">Konya</option>
+                                    <option value="43">K&#252;tahya</option>
+                                    <option value="44">Malatya</option>
+                                    <option value="45">Manisa</option>
+                                    <option value="47">Mardin</option>
+                                    <option value="33">Mersin</option>
+                                    <option value="48">Muğla</option>
+                                    <option value="49">Muş</option>
+                                    <option value="50">Nevşehir</option>
+                                    <option value="51">Niğde</option>
+                                    <option value="52">Ordu</option>
+                                    <option value="80">Osmaniye</option>
+                                    <option value="53">Rize</option>
+                                    <option value="54">Sakarya</option>
+                                    <option value="55">Samsun</option>
+                                    <option value="56">Siirt</option>
+                                    <option value="57">Sinop</option>
+                                    <option value="58">Sivas</option>
+                                    <option value="63">Şanlıurfa</option>
+                                    <option value="73">Şırnak</option>
+                                    <option value="59">Tekirdağ</option>
+                                    <option value="60">Tokat</option>
+                                    <option value="61">Trabzon</option>
+                                    <option value="62">Tunceli</option>
+                                    <option value="64">Uşak</option>
+                                    <option value="65">Van</option>
+                                    <option value="77">Yalova</option>
+                                    <option value="66">Yozgat</option>
+                                    <option value="67">Zonguldak</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="IlceId">
+                                    Your County (In T&#252;rkiye) <span class="spYurtIciZorunlu"> *</span>
+                                </label>
+                                <select class="form-control pointer" id="IlceId" name="IlceId" tabindex="80">
+                                    <option selected="selected" value="">Select</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="BasvuruNedeniId">Application Reason *</label>
+                                <select class="form-control pointer" data-val="true" data-val-required="Bu alanın doldurulması zorunludur." id="BasvuruNedeniId" name="BasvuruNedeniId" tabindex="90">
+                                    <option selected="selected" value="">Select</option>
+                                    <option value="Kan Hizmetleri">Blood Services</option>
+                                    <option value="Şikayet">Feed Back</option>
+                                    <option value="Dergi ">Dergi </option>
+                                    <option value="Bağış">Donate</option>
+                                    <option value="Sağlık / Randevu">Sağlık / Randevu</option>
+                                    <option value="Gönüllü Çalışma">Volunteering</option>
+                                </select>
+                                <span class="field-validation-valid" data-valmsg-for="1" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="Mesaj">Message *</label>
+                                <textarea class="form-control" cols="20" data-val="true" data-val-required="Bu alanın doldurulması zorunludur." id="Mesaj" maxlength="10000" name="Mesaj" required="required" rows="8" tabindex="100"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="control-group">
+                                    <div id="dropzonePreview" class="dropzone-previews"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                You can read our privacy anda data security policy at&nbsp;&nbsp;​ <a href="https://www.iku.edu.tr/" target="_blank">privacy-and-data-security-policy</a>
+                            </div>
+                        </div>
+                        <div class="row"></div>
+                    </fieldset>
+                    <div class="row">
+                        <div class="col-md-12"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary" name="submit" id="btniletisimsend">
+                                <i class="fa fa-check"></i> SEND
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="message">
+                    <h5 id="tesekkur_mesaj" class="fl mb_20 cleaner mt_20 f_14 f_red height_70" style="display: none"> Your message has been successfully received and will be shared with the relevant units as soon as possible. We thank you. </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
